@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- КАРТИНКА СВЕРХУ -->
+        <ImageView
+            android:id="@+id/ivTopArt"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_register_art"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Create Account"
+            android:textColor="@color/splash_bg"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivTopArt" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Hi, kindly fill in the form to proceed combat"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <!-- FULL NAME -->
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_input_line"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:paddingBottom="12dp"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+        <!-- USER NAME -->
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_line"
+            android:hint="User Name"
+            android:inputType="textPersonName"
+            android:paddingBottom="12dp"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etFullName" />
+
+        <!-- PHONE (С префиксом) -->
+        <LinearLayout
+            android:id="@+id/llPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_line"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUserName">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+7"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <!-- Вертикальная линия -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="#E0E0E0" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Your Phone"
+                android:inputType="phone"
+                android:textColorHint="@color/text_secondary" />
+        </LinearLayout>
+
+        <!-- EMAIL -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_line"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="12dp"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llPhone" />
+
+        <!-- PASSWORD -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_line"
+            android:drawableEnd="@drawable/ic_eye"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingBottom="12dp"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+        <!-- CONFIRM PASSWORD -->
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input_line"
+            android:drawableEnd="@drawable/ic_eye"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:paddingBottom="12dp"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+        <!-- КНОПКА -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/splash_bg"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword" />
+
+        <!-- НИЖНИЙ ТЕКСТ -->
+        <TextView
+            android:id="@+id/tvAlreadyHave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:text="Already have an account?\nLogin"
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

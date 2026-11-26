@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Pr30_Levenec</string>
+    <string name="app_title">GAAMETIME</string>
+    <string name="app_subtitle">CONNECT WITH YOUR REALITY</string>
+    <string name="onb_title_1">Get Paid! Playing\nVideo Game</string>
+    <string name="onb_desc_1">Earn points and real cash when\nyou win a battle with no delay\nin cashing out</string>
+    <string name="skip">Skip</string>
+    <string name="onb_title_2">Schedule Games\nWith Friends</string>
+    <string name="onb_desc_2">Easily create an upcoming\nevent and get ready for battle.\nTech\'s real combat feels.</string>
+
+    <string name="onb_title_3">Text, Audio and\nVideo Chat</string>
+    <string name="onb_desc_3">Intuitive real-time experience on\nmobile. Chat with fellow gamers\nbefore and after combat for free!</string>
+
+    <string name="lets_connect">Let\'s Connect!</string>
+</resources>

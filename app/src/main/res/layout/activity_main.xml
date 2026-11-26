@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- КАРТИНКА СВЕРХУ (ЗАМЕНИШЬ) -->
+        <ImageView
+            android:id="@+id/ivTopArt"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_login_art"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Welcome Back!"
+            android:textColor="@color/splash_bg"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivTopArt" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Hi, Kindly login to continue battle"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+
+        <!-- ПОЛЕ EMAIL -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/splash_bg"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="12dp"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+        <!-- ПОЛЕ ПАРОЛЯ -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/splash_bg"
+            android:drawableEnd="@drawable/ic_eye"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingBottom="12dp"
+            android:textColorHint="@color/text_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+        <TextView
+            android:id="@+id/tvForgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Forgot Password?"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+        <!-- КНОПКА ЛОГИН -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/splash_bg"
+            android:text="Let's Combat!"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForgotPass" />
+
+        <TextView
+            android:id="@+id/tvConnectWith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Connect With:"
+            android:textColor="@color/splash_bg"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <!-- ИКОНКИ СОЦСЕТЕЙ -->
+        <LinearLayout
+            android:id="@+id/llSocials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvConnectWith">
+
+            <ImageView
+                android:id="@+id/btnGoogle"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_google" />
+
+            <ImageView
+                android:id="@+id/btnFacebook"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_facebook" />
+        </LinearLayout>
+
+        <!-- НИЖНИЙ ТЕКСТ -->
+        <TextView
+            android:id="@+id/tvNoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:text="Don't have an account?\nCreate Account!"
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llSocials" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
